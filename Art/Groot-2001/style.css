@@ -4,6 +4,7 @@ html {
   padding: 0;
 }
 
+
 @keyframes bounce {
   0%,
   100% {
@@ -22,5 +23,17 @@ html {
 
   50% {
     transform: scaleY(-1);
+
   }
+}
+
+@keyframes flip {
+  0% {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(-1);
+  }
+
 }
