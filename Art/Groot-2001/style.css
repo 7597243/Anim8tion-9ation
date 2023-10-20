@@ -6,7 +6,6 @@ html {
 
 
 @keyframes bounce {
-
   0%,
   100% {
     transform: translateY(0);
@@ -14,6 +13,17 @@ html {
 
   50% {
     transform: translateY(-30px);
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(-1);
+
   }
 }
 

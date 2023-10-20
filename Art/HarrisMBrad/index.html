@@ -2,31 +2,53 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+
+  <meta charset="UTF-8" />
   <title>Brad M Harris</title>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="styleguide.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero-c {
+      display: flex;
+      align-items: center;
+    }
+
+    .the-largest {
+      flex: 1;
+      margin-right: 20px;
+    }
+
+    img {
+      max-width: 300px;
+      /* Adjust this to your desired width */
+      margin-right: 20px;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="circle rotate" id="B"></div>
-    <div class="square bounce" id="M">
+  <nav role="navigation">
+    <!-- Menu Code here-->
+    <ul class="navigation">
+      <li class="circle roll"><a href="#home">Home</a></li>
+      <li class="square bounce"><a href="#about">About</a></li>
+      <li class="triangle flip"><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    </div>
-    <div class="triangle flip" id="H">
-      <article>
-        <h2>Embarkation</h2>
-        <p>As we emerge from this brief creative reverie, it is time to translate our artistic aspirations into action.
-          Filled with renewed energy and purpose, we embark on the journey of giving life to Seurat's impressionistic
-          developer through our own interpretation, guided by the artistry of AI.</p>
-        <h3>Meticulocity</h3>
-        <p>In this remarkable artistic adventure, we embrace the essence of Seurat's style, mirroring his pointillistic
-          lens. Together, we immerse ourselves in the intricate world of meticulously placed dots and vibrant colors,
-          ready to create a truly unique and captivating piece, born from the harmonious collaboration between human
-          creativity and AI's artistic prowess.</p>
-      </article>
-    </div>
-  </div>
+
+  <card>
+    <div class="container">
+      <div class="hero-c">
+        <div class="the-largest">
+
+
+        </div>
+
+  </card>
+
 </body>
 
 </html>
