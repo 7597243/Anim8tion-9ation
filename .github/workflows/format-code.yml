@@ -4,18 +4,30 @@ on: push
 jobs:
   format:
     runs-on: ubuntu-20.04
+    defaults:
+      run:
+        shell: bash
+    env:
+      NODE_VERSION: 16
 
     steps:
+      - name: Setup Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+          
       - name: Pull Repo
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.ref }}
+
       - name: Install Prettier
         env:
           PRETTIER_VERSION: 2
         run: |
           sudo npm i -g prettier@$PRETTIER_VERSION
+
       - name: Format
         run: |
           # don't format if there's no .prettierrc file
@@ -26,6 +38,7 @@ jobs:
           fi
 
           prettier --check . --ignore-unknown --write
+
       - name: Push Back Formatted Code
         run: |
           # configure git
@@ -35,3 +48,4 @@ jobs:
           git add .
           git commit -m "(CI) format code" || echo "nothing to commit"
           git push
+
